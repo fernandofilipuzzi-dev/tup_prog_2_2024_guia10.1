@@ -1,0 +1,12 @@
+Tipo:Asalariado;DNI;Nombre;Básico,Aportes provisionales
+Tipo:Jornalero; DNI; Nombre; Horas Trabajadas; Importe Por Hora; Retenciones
+Asalariado;45654355;Agustín;900456,00;6000,5
+Jornalero;32445656;Leticia;10;500,2;100,00
+Asalariado;48456455;Laura;850000,0;1000,1
+Jornalero;45645555;Vicente;500000;900,0;150,00
+Asalariado;46894266;Julieta;1200000;7000,2
+Asalariado;46894266;Teresa;1200000;7000,2
+Jornalero;32445656;Isabel;10;4500,2;300,00
+Asalariado;45564663;Aurelio;1200000;7000,2
+Asalariado;45564663;Luisa;2200000;14000,9
+Asalariado;45564663;Celina;4200000;24000,9

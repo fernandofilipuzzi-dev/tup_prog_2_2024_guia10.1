@@ -1,0 +1,27 @@
+ El Sr/a Leticia(32445656) recibió la suma de $4902,00 
+ En concepto de horas de trabajo: (10) 
+ Siendo el valor de la hora 500,2 y  
+ a la cual se le ha retenido por conceptos impositivos la suma de:
+ $100
+---
+ El Sr/a Vicente(45645555) recibió la suma de $449999850,00 
+ En concepto de horas de trabajo: (500000) 
+ Siendo el valor de la hora 900 y  
+ a la cual se le ha retenido por conceptos impositivos la suma de:
+ $150
+---
+ Empleado: Agustín(45654355
+ Basico $900456,00
+ Aportes $6000,50
+ Total: $894455,5
+---
+ Empleado: Laura(48456455
+ Basico $850000,00
+ Aportes $1000,10
+ Total: $848999,9
+---
+ Empleado: Julieta(46894266
+ Basico $1200000,00
+ Aportes $7000,20
+ Total: $1192999,8
+---
