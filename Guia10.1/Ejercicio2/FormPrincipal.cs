@@ -129,7 +129,7 @@ namespace Ejercicio2
 
                     foreach (IExportable ev in selected.VerExportables())
                     { 
-                        sw.WriteLine(ev.ToString()); //polimorfismo!!!!!!!
+                        sw.WriteLine(ev.Escribir()); //polimorfismo!!!!!!!
                     } 
                 }
             }
