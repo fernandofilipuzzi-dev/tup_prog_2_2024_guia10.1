@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -42,7 +43,7 @@ namespace Ejercicio2
 
             if (selected == null)
             {
-                MessageBox.Show("Seleccione un evento para proseguir","Advertencia");
+                MessageBox.Show("Seleccione un evento para proseguir. Sino hay un evento, darlo de alta (1)","Advertencia");
                 return;
             }
 
@@ -54,7 +55,7 @@ namespace Ejercicio2
             StreamReader sr = null;
             try
             {
-                openFileDialog1.Title = $"Importación para el evento {selected.NombreEvento}";
+                openFileDialog1.Title = $"Importación de asistentes para el evento {selected.NombreEvento}";
                 openFileDialog1.Filter = "Fichero de importación csv|*.csv";
                 if(openFileDialog1.ShowDialog()==DialogResult.OK)
                 { 
@@ -63,11 +64,16 @@ namespace Ejercicio2
                     fs = new FileStream(nombre,FileMode.Open, FileAccess.Read);
                     sr = new StreamReader(fs);
 
+                    //Tipo:TECNICO; CUIT; nombre;Cargo
+                    string linea = sr.ReadLine();
+                    //Tipo: EXPOSITOR; dni; nombre; PapelProtagonico
+                    linea = sr.ReadLine();
+
                     while (sr.EndOfStream == false)
                     {
-                        string linea = sr.ReadLine();
+                        linea = sr.ReadLine();
 
-                        string[] campos = linea.Split();
+                        string[] campos = linea.Split(';');
 
                         IExportable registro = null;
                         if (campos[0] == "EXPOSITOR")
@@ -79,7 +85,9 @@ namespace Ejercicio2
                         {
                             registro = new Tecnico();
                         }
-                        registro.Leer(campos);//polimorfismo!!!!!!!
+
+                        if(registro!=null)
+                            registro.Leer(campos);//polimorfismo!!!!!!!
 
                         selected.RegistrarExportable(registro);
                     }
@@ -126,6 +134,11 @@ namespace Ejercicio2
 
                     fs = new FileStream(nombre, FileMode.OpenOrCreate, FileAccess.Write);
                     sw = new StreamWriter(fs);
+
+                    string linea = "Tipo:TECNICO; CUIT; nombre;Cargo";
+                    sw.WriteLine(linea);
+                    linea = "Tipo: EXPOSITOR; dni; nombre; PapelProtagonico";
+                    sw.WriteLine(linea);
 
                     foreach (IExportable ev in selected.VerExportables())
                     { 

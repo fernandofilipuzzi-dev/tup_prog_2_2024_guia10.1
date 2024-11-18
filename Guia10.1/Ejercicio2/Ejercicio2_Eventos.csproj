@@ -74,8 +74,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="FicherosPrueba\exportar.csv" />
-    <None Include="FicherosPrueba\import.csv" />
+    <None Include="FicherosPrueba\exportar_expositores_tecnicos.csv" />
+    <None Include="FicherosPrueba\importar_expositores_tecnicos.csv" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

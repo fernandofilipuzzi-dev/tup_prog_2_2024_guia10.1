@@ -1,7 +1,0 @@
-Tipo:Asalariado;DNI;Nombre;Básico,Aportes provisionales
-Tipo: Jornalero; DNI; Nombre; Horas Trabajadas; Importe Por Hora; Retenciones
-Jornelero;32445656;Leticia;10,00,100
-Jornelero;45645555;Vicente;500000,00,150
-Asalariado;45654355;Agustín;900456,00,6000,5
-Asalariado;48456455;Laura;850000,00,1000,1
-Asalariado;46894266;Julieta;1200000,00,7000,2
